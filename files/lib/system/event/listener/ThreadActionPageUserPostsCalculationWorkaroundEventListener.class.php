@@ -23,7 +23,7 @@ class ThreadActionPageUserPostsCalculationWorkaroundEventListener implements Eve
 	 */
 	public function execute($eventObj, $className, $eventName) {
 		if ($eventObj->action == 'enable') {
-			if ($eventObj->board->getModeratorPermission('canEnableThread') && !$eventObj->thread->everEnabled) {
+			if ($eventObj->thread->userID && $eventObj->board->countUserPosts && $eventObj->board->getModeratorPermission('canEnableThread') && !$eventObj->thread->everEnabled) {
 				WBBUser::updateUserPosts($eventObj->thread->userID, -1);
 				
 				if (ACTIVITY_POINTS_PER_THREAD) {

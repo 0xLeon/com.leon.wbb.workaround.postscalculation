@@ -22,7 +22,7 @@ class PostActionPageUserPostsCalculationWorkaroundEventListener implements Event
 	 */
 	public function execute($eventObj, $className, $eventName) {
 		if ($eventObj->action == 'enable') {
-			if ($eventObj->board->getModeratorPermission('canEnableThread') && !$eventObj->post->everEnabled) {
+			if ($eventObj->post->userID && $eventObj->board->countUserPosts && $eventObj->board->getModeratorPermission('canEnableThread') && !$eventObj->post->everEnabled) {
 				WBBUser::updateUserPosts($eventObj->post->userID, -1);
 				
 				if (ACTIVITY_POINTS_PER_POST) {
