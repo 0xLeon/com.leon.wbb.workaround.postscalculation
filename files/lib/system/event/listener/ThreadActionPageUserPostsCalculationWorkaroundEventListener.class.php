@@ -5,6 +5,7 @@ require_once(WCF_DIR.'lib/data/user/rank/UserRank.class.php');
 
 // wbb imports
 require_once(WBB_DIR.'lib/data/user/WBBUser.class.php');
+require_once(WBB_DIR.'lib/data/post/Post.class.php');
 
 /**
  * Workaround for wrong calculation of user posts and activity points
