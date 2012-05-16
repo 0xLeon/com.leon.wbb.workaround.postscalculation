@@ -12,7 +12,7 @@ require_once(WBB_DIR.'lib/data/post/Post.class.php');
  * 
  * @author	Stefan Hahn
  * @copyright	2012 Stefan Hahn
- * @license	
+ * @license	GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
  * @package	com.leon.wbb.workaround.postscalculation
  * @subpackage 	system.event.listener
  * @category 	Burning Board
