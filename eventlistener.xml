@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/eventlistener.xsd">
+	<import>
+		<eventlistener>
+			<eventclassname>ThreadAddForm</eventclassname>
+			<eventname>saved</eventname>
+			<listenerclassfile>lib/system/event/listener/ThreadAddFormUserPostsCalculationWorkaroundEventListener.class.php</listenerclassfile>
+			<environment>user</environment>
+		</eventlistener>
+		<eventlistener>
+			<eventclassname>PostAddForm</eventclassname>
+			<eventname>saved</eventname>
+			<listenerclassfile>lib/system/event/listener/PostAddFormUserPostsCalculationWorkaroundEventListener.class.php</listenerclassfile>
+			<environment>user</environment>
+		</eventlistener>
+		<eventlistener>
+			<eventclassname>ThreadActionPage</eventclassname>
+			<eventname>show</eventname>
+			<listenerclassfile>lib/system/event/listener/ThreadActionPageUserPostsCalculationWorkaroundEventListener.class.php</listenerclassfile>
+			<environment>user</environment>
+		</eventlistener>
+		<eventlistener>
+			<eventclassname>PostActionPage</eventclassname>
+			<eventname>show</eventname>
+			<listenerclassfile>lib/system/event/listener/PostActionPageUserPostsCalculationWorkaroundEventListener.class.php</listenerclassfile>
+			<environment>user</environment>
+		</eventlistener>
+		<eventlistener>
+			<eventclassname>UpdateUsersAction</eventclassname>
+			<eventname>executed</eventname>
+			<listenerclassfile>lib/system/event/listener/UpdateUsersActionUserPostsCalculationWorkaroundEventListener.class.php</listenerclassfile>
+			<environment>admin</environment>
+		</eventlistener>
+	</import>
+</data>
